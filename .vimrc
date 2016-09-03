@@ -31,7 +31,8 @@ set smarttab " tab respects 'tabstop'. 'shiftwidth', and 'softtab'
 
 " Faster saving from insert mode
 inoremap ;w <Esc>:w<CR>
-nnoremap ;w :w<CR>  
+inoremap ;q <Esc>:q!<CR>
+inoremap ;x <Esc>:x<CR>
 inoremap ZZ <Esc>:x<CR>
 inoremap ZQ <Esc>ZQ
 
