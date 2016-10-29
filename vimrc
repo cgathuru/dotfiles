@@ -73,7 +73,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim' "Fuzzy find serarching
 
 " Completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Status line
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
