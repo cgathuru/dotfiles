@@ -1,0 +1,8 @@
+[Unit]
+Description=Check the network mounts
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+
+[Install]
+WantedBy=timer.target

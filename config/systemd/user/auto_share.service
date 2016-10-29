@@ -1,0 +1,6 @@
+[Unit]
+Description=Check the network mounts
+
+[Service]
+Type=simple
+ExecStart=/home/charles/scripts/auto_share
