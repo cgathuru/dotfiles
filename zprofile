@@ -1,3 +1,3 @@
-if [-z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
+if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
 	exec ssh-agent startx
 fi
