@@ -200,17 +200,17 @@ nnoremap <localleader>gu  :e urls.py<cr>
 
 "This is to check that the directory looks djangoish
 fun! RelatedFile(file)
-    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
-        exec "edit %:h/" . a:file
-        let g:last_relative_dir = expand("%:h") . '/'
-        return ''
-    endif
-    if g:last_relative_dir != ''
-        exec "edit " . g:last_relative_dir . a:file
-        return ''
-    endif
-    echo "Cant determine where relative file is : " . a:file
-    return ''
+	if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
+		exec "edit %:h/" . a:file
+		let g:last_relative_dir = expand("%:h") . '/'
+		return ''
+	endif
+	if g:last_relative_dir != ''
+		exec "edit " . g:last_relative_dir . a:file
+		return ''
+	endif
+	echo "Cant determine where relative file is : " . a:file
+	return ''
 endfun
 
 if !exists("*SetAppDir")
