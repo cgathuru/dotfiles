@@ -73,7 +73,8 @@ macro index o	"<shell-escape>mbsync -a<enter>"	"run mbsync to sync all mail"
 
 # General settings ------------------------------------------------------------
 set mailcap_path = ~/.mutt/mailcap
-source ~/.mutt/colours.zenburn
+#source ~/.mutt/colours.zenburn
+source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
 set text_flowed
 set send_charset = "utf-8"
 set charset=`locale charmap`//TRANSLIT
