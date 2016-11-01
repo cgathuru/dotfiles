@@ -1,0 +1,85 @@
+IMAPAccount gmail
+Host imap.gmail.com
+User charlesgathuru@gmail.com
+PassCmd "secret-tool lookup user charlesgathuru"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Path ~/.mail/gmail/
+Inbox ~/.mail/gmail/inbox
+
+Channel gmail-default
+Master :gmail-remote:
+Slave  :gmail-local:
+Patterns INBOX
+
+Channel gmail-sent
+Master ":gmail-remote:[Google Mail]/Sent Mail"
+slave  :gmail-local:sent
+
+Channel gmail-trash
+Master :gmail-remote:"[Google Mail]/Bin"
+slave  :gmail-local:trash
+
+Channel gmail-archive
+Master :gmail-remote:"[Google Mail]/All Mail"
+slave  :gmail-local:all
+
+Channel gmail-drafts
+Master :gmail-remote:"[Google Mail]/Drafts"
+Slave :gmail-local:drafts
+
+# Automatically create missing mailboxes, both locally and on the server
+Create slave # Only create locally for now
+SyncState *
+
+Group gmail
+Channel gmail-default
+Channel gmail-trash
+Channel gmail-archive
+Channel gmail-sent
+Channel gmail-drafts
+
+IMAPAccount mcgill
+Host outlook.office365.com
+User charles.gathuru@mail.mcgill.ca
+PassCmd "secret-tool lookup user charles.gathuru@mail.mcgill.ca"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore mcgill-remote
+Account mcgill
+
+MaildirStore mcgill-local
+Path ~/.mail/mcgill/
+Inbox ~/.mail/mcgill/inbox
+
+Channel mcgill-default
+Master :mcgill-remote:
+Slave  :mcgill-local:
+Patterns INBOX
+
+Channel mcgill-sent
+Master :mcgill-remote:"Sent Items"
+Slave  :mcgill-local:sent
+
+Channel mcgill-trash
+Master :mcgill-remote:"Deleted Items"
+Slave  :mcgill-local:trash
+
+Channel mcgill-drafts
+Master :mcgill-remote:"Drafts"
+Slave  :mcgill-local:drafts
+
+Create slave
+SyncState *
+
+Group mcgill
+Channel mcgill-default
+Channel mcgill-sent
+Channel mcgill-trash
+Channel mcgill-drafts
