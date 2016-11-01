@@ -1,0 +1,11 @@
+# Account Settings ------------------------------------------------------------
+set folder		= "~/.mail/gmail"
+set spoolfile           = "+inbox" # Default inbox
+set mbox                = "+all"
+set postponed           = "+drafts"
+#set editor              = "vim -c \"set spell spelllang=en_ca\""
+set record              = "+sent"
+set from                = 'charlesgathuru@gmail.com'
+set sendmail		= "/usr/bin/msmtp -a gmail"
+
+macro index,pager d "<save-message>=trash<enter>" "Trash"

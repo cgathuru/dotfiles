@@ -1,0 +1,11 @@
+# Account Settings ------------------------------------------------------------
+set folder		= "~/mail/mcgill"
+set spoolfile           = "+inbox" # Default inbox
+set mbox                = "+all"
+set postponed           = "+drafts"
+#set editor              = "vim -c \"set spell spelllang=en_ca\""
+set record              = "+sent"
+set from                = 'charles.gathuru@mail.mcgill.ca'
+set sendmail		= "/usr/bin/msmtp -a mcgill"
+
+macro index,pager d "<save-message>=trash<enter>" "Trash"
