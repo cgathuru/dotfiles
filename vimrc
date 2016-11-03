@@ -93,13 +93,21 @@ Plug 'tpope/vim-fugitive' " Git wrapper
 " Syntax Checking
 Plug 'scrooloose/syntastic'
 
+" Color Scheme
+Plug 'altercation/vim-colors-solarized'
+
 " Python Plugins
-Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
+"Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 call plug#end()
 
 filetype plugin indent on
 " -------- Plugin Configuration ----------"
+
+" Set colorscheme
+set background=dark
+colorscheme solarized
+let g:airline_theme = 'base16_solarized'
 
 " Airline settings
 set laststatus=2 " Statusline always on
@@ -110,6 +118,7 @@ endif
 " unicode symbols
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.whitespace = 'Ξ'
+"let g:airline_theme = 'solarized'
 
 " Ctrlp Settings
 let g:ctrlp_working_path_modee = 'ra'
