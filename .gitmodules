@@ -1,3 +1,6 @@
 [submodule "mutt/mutt-colors-solarized"]
 	path = mutt/mutt-colors-solarized
 	url = https://github.com/altercation/mutt-colors-solarized.git
+[submodule "mutt/extracturl"]
+	path = mutt/extracturl
+	url = https://github.com/m3m0ryh0l3/extracturl.git
