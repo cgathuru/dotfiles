@@ -55,7 +55,9 @@ set sort_re						# thread based on regex
 auto_view text/html
 alternative_order text/plain text/html
 macro attach 'V' "<pipe-entry>cat >~/.cache/mutt/mail.html && $BROWSER ~/.cache/mutt/mail.html && rm ~/.cache/mutt/mail.html<enter>"
-macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links iwht urlview'
+#macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links iwht urlview'
+macro index,pager \cb "<enter-command> set my_pdsave=\$pipe_decode<enter>\
+<enter-command> unset pipe_decode<enter><pipe-message>extracturl/extract_url.pl<enter><enter-command> set pipe_decode=\$my_pdsave<enter>" "get URLS"
 bind pager <up> previous-line
 bind pager <down> next-line
 bind pager [ previous-unread
