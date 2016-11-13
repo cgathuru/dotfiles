@@ -1,1 +1,9 @@
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+application/msword; antiword '%s'; copiousoutput; description=Word Document;
+nametemplate=%s.doc
+application/pdf; pdftotext '%s' -; copiousoutput; description=PDF Document;
+nametemplate=%s.pdf
+application/msexcel; xlhtml '%s'; copiousoutput; description=Excel Document;
+nametemplate=%s.xls
+application/ppt; xlhtml '%s'; copiousoutput; description=Word Document;
+nametemplate=%s.ppt

@@ -107,7 +107,8 @@ filetype plugin indent on
 " Set colorscheme
 set background=dark
 colorscheme solarized
-let g:airline_theme = 'base16_solarized'
+"let g:airline_theme = 'base16_solarized'
+let g:airline_theme = 'solarized'
 
 " Airline settings
 set laststatus=2 " Statusline always on
@@ -118,7 +119,6 @@ endif
 " unicode symbols
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.whitespace = 'Ξ'
-"let g:airline_theme = 'solarized'
 
 " Ctrlp Settings
 let g:ctrlp_working_path_modee = 'ra'
