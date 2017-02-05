@@ -54,18 +54,12 @@ nnoremap <leader><leader> ,
 "nnoremap <C-H> <C-W><C-H>
 
 " Firefox-like tab navigation
-map <C-S-]> gt
-map <C-S-[> gT
-map <C-1> 1gt
-map <C-2> 2gt
-map <C-3> 3gt
-map <C-4> 4gt
-map <C-5> 5gt
-map <C-6> 6gt
-map <C-7> 7gt
-map <C-8> 8gt
-map <C-9> 9gt
-map <C-0> :tablast<CR>
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab> <Esc>:tabnext<CR>i
+inoremap <C-t> <Esc>:tabnew<CR>
 
 "-------- Plugins -------------"
 call plug#begin('~/.vim/plugged')
