@@ -4,6 +4,8 @@ set number
 set relativenumber
 set tabstop=4 shiftwidth=4 softtabstop=4
 syntax on
+set nofoldenable
+set backupcopy=yes
 
 " Set search highlighting
 set hlsearch
@@ -93,6 +95,10 @@ Plug 'altercation/vim-colors-solarized'
 " Python Plugins
 "Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
+
+" Jsx
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
 call plug#end()
 
 filetype plugin indent on
@@ -113,6 +119,7 @@ endif
 " unicode symbols
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_theme='solarized'
 
 " Ctrlp Settings
 let g:ctrlp_working_path_modee = 'ra'
