@@ -175,9 +175,10 @@ bar {
         status_command i3status --config ~/.config/i3/i3status.conf
 }
 
-# Disable title bars
+# Remove title bars
 new_window none
 new_float none
+
 # Set brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2 # decrease screen brightness
@@ -197,6 +198,9 @@ bindsym --release Ctrl+Print exec "scrot -q 100 -s ~/images/screenshots/%Y%m%d_%
 # Trackpad Natural Scrolling
 exec --no-startup-id xinput set-prop "DLL0665:01 06CB:76AD Touchpad" "libinput Natural Scrolling Enabled" 1
 exec --no-startup-id xinput set-prop "DLL0665:01 06CB:76AD Touchpad" "libinput Tapping Enabled" 1
+
+# Start Virtualbox
+exec --no-startup-id VBoxClient-all
 
 # Start network manager applet
 exec --no-startup-id nm-applet

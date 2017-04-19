@@ -49,12 +49,6 @@ let mapleader = ','
 let maplocalleader = "\\"
 nnoremap <leader><leader> ,
 
-" Easier split navigations
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
-
 " Firefox-like tab navigation
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab> :tabnext<CR>
@@ -69,7 +63,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim' "Fuzzy find serarching
 
 " Completion
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python2 install.py' }
 
 " Status line
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
@@ -83,11 +77,17 @@ Plug 'godlygeek/tabular' " Aligning text on multiple lines
 Plug 'chip/vim-fat-finger'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'cgathuru/snips'
+if v:version > 703
+	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'cgathuru/snips'
+endif
 Plug 'tpope/vim-fugitive' " Git wrapper
 
 " Syntax Checking
-Plug 'scrooloose/syntastic'
+if v:version > 704
+	Plug 'w0rp/ale'
+else
+	Plug 'scrooloose/syntastic'
+endif
 
 " Color Scheme
 Plug 'altercation/vim-colors-solarized'
@@ -97,21 +97,28 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 
 " Jsx
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript.jsx'}
+
+" Colorscheme
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 filetype plugin indent on
 " -------- Plugin Configuration ----------"
 
-" Set colorscheme
+" Colorscheme settings
 set background=dark
 colorscheme solarized
-"let g:airline_theme = 'base16_solarized'
-let g:airline_theme = 'solarized'
+call togglebg#map("<F6>")
+
+" JSX settings
+let g:vim_jsx_pretty_colorful_config = 1
+autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 
 " Airline settings
 set laststatus=2 " Statusline always on
+let g:airline_theme = 'solarized'
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
@@ -139,20 +146,17 @@ let g:ycm_complete_in_strings = 1 " Completion in strings
 
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-" Ultisnips Settings
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<C-l>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir="~/projects/snips/UltiSnips"
-nnoremap <leader>ue :UltiSnipsEdit<CR>
+if v:version > 703
+	" Ultisnips Settings
+	"let g:UltiSnipsExpandTrigger="<tab>"
+	let g:UltiSnipsListSnippets="<C-l>"
+	let g:UltiSnipsEditSplit="vertical"
+	let g:UltiSnipsSnippetsDir="~/projects/snips/UltiSnips"
+	nnoremap <leader>ue :UltiSnipsEdit<CR>
+endif
 
 " ----- Filetype Settings --------
 set wildignore+=*.pyc " Ignore python compiled files
-
-augroup html
-	au!
-	au BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
 
 " Diable Arrow keys in Normal mode
 map <up> <nop>
@@ -201,11 +205,12 @@ nnoremap <localleader>m  :call RelatedFile ("models.py")<cr>
 nnoremap <localleader>v  :call RelatedFile ("views.py")<cr>
 nnoremap <localleader>u  :call RelatedFile ("urls.py")<cr>
 nnoremap <localleader>a  :call RelatedFile ("admin.py")<cr>
+nnoremap <localleader>f  :call RelatedFile ("feeds.py")<cr>
 nnoremap <localleader>te  :call RelatedFile ("tests.py")<cr>
 nnoremap <localleader>t  :call RelatedFile ( "templates/" )<cr>
 nnoremap <localleader>tt  :call RelatedFile ( "templatetags/" )<cr>
 nnoremap <localleader>ma  :call RelatedFile ( "management/" )<cr>
-nnoremap <localleader>s  :e settings.py<cr>
+nnoremap <localleader>s  :e serializers.py<cr>
 nnoremap <localleader>gu  :e urls.py<cr>
 
 "This is to check that the directory looks djangoish
