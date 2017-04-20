@@ -6,8 +6,8 @@ sudo pacman --no-confirm -S vim cmake wget zsh tmux i3 termite redshift xorg-ser
 adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts python2
 
 # Set up vim
-mkdir -p $HOME/.vim $HOME/.VIM_UNDO_FILES
-ln -s $PWD/vim/after $HOME/.vim/after
+mkdir -p $HOME/.vim $HOME/.VIM_UNDO_FILES .$HOME/.vim/after
+ln -s $PWD/vim/after/ftplugin $HOME/.vim/after/ftplugin
 ln -s $PWD/vimrc $HOME/.vimrc
 curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
