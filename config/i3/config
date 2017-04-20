@@ -200,7 +200,7 @@ exec --no-startup-id xinput set-prop "DLL0665:01 06CB:76AD Touchpad" "libinput N
 exec --no-startup-id xinput set-prop "DLL0665:01 06CB:76AD Touchpad" "libinput Tapping Enabled" 1
 
 # Start Virtualbox
-exec --no-startup-id VBoxClient-all
+#exec --no-startup-id VBoxClient-all
 
 # Start network manager applet
 exec --no-startup-id nm-applet
