@@ -4,3 +4,6 @@
 [submodule "mutt/extracturl"]
 	path = mutt/extracturl
 	url = https://github.com/m3m0ryh0l3/extracturl.git
+[submodule "termite-colors-solarized"]
+	path = termite-colors-solarized
+	url = https://github.com/alpha-omega/termite-colors-solarized.git
