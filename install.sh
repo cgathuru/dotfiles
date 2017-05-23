@@ -4,7 +4,7 @@
 # First get packages
 sudo pacman -S vim cmake wget zsh tmux i3 termite redshift xorg-server xorg-xinit openssh adobe-source-code-pro-fonts \
 adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts python2 xorg-xrandr numlockx \
-ttf-dejavu
+ttf-dejavu xorg-xset polkit
 
 # Set up vim
 mkdir -p $HOME/.vim/after $HOME/.VIM_UNDO_FILES
