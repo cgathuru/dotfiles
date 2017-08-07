@@ -11,6 +11,7 @@ setlocal encoding=utf-8
 " Enable folding
 setlocal foldmethod=indent
 setlocal foldlevel=99
+iabbrev <buffer> ok ok
 
 augroup fold_space
 	au!
