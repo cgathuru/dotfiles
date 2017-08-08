@@ -1,11 +1,15 @@
 " ------ Basic settings --------"
 set encoding=utf-8
-set number
+if v:version > 703
+	set number
+endif
 set relativenumber
-set tabstop=4 shiftwidth=4 softtabstop=4
+setl tabstop=4 shiftwidth=4 softtabstop=4
 syntax on
 set nofoldenable
 set backupcopy=yes
+set splitright " Split vertical windows right to the current windows
+set splitbelow " Split horizontal windows below the current windows
 
 " Set search highlighting
 set hlsearch
@@ -48,6 +52,7 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 let mapleader = ','
 let maplocalleader = "\\"
 nnoremap <leader><leader> ,
+nnoremap <leader>w :w<CR>
 
 " Firefox-like tab navigation
 nnoremap <C-S-tab> :tabprevious<CR>
