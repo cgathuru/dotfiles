@@ -54,6 +54,10 @@ let maplocalleader = "\\"
 nnoremap <leader><leader> ,
 nnoremap <leader>w :w<CR>
 
+" Faster buffer switching
+nnoremap <leader>n :bnext<CR>
+nnoremap <leader>b :bprevious<CR>
+
 " Firefox-like tab navigation
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab> :tabnext<CR>
