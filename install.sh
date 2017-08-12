@@ -2,9 +2,10 @@
 # You should already have git, sudo and the dotfiles repo cloned
 
 # First get packages
-sudo pacman -S vim cmake wget zsh tmux i3 termite redshift xorg-server xorg-xinit openssh adobe-source-code-pro-fonts \
-adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts python2 xorg-xrandr numlockx \
-ttf-dejavu xorg-xset polkit
+sudo pacman -S vim cmake wget zsh tmux i3 termite redshift xorg-server \
+xorg-xinit openssh adobe-source-code-pro-fonts ttf-symbola ttf-dejavu \
+adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts python2 \
+xorg-xrandr numlockx xorg-xset polkit
 
 # Set up vim
 mkdir -p $HOME/.vim/after $HOME/.VIM_UNDO_FILES
@@ -46,7 +47,7 @@ packer -S ttf-font-awesome
 packer -S enpass-bin caffeine-ng
 
 # Setup audio
-packer -S pulseaudio pavucontrol pulseaudio-ctl
+packer -S pulseaudio pavucontrol pulseaudio-ctl playerctl
 
 # Setup network
 packer -S networkmanager network-manager-applet networkmanager-openvpn private-internet-access-vpn gnome-keyring libsecret
