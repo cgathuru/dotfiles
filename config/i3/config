@@ -201,8 +201,9 @@ bar {
 }
 
 # Remove title bars
-new_window none
-new_float none
+new_window pixel 3
+new_float pixel 3
+hide_edge_borders smart
 
 # Set brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2 # increase screen brightness
