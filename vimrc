@@ -86,10 +86,12 @@ Plug 'godlygeek/tabular' " Aligning text on multiple lines
 Plug 'chip/vim-fat-finger'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
 if v:version > 703
 	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'cgathuru/snips'
 endif
 Plug 'tpope/vim-fugitive' " Git wrapper
+Plug 'michaeljsmith/vim-indent-object'
 
 " Syntax Checking
 if v:version > 704
