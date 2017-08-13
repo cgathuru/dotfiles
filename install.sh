@@ -49,6 +49,9 @@ packer -S enpass-bin caffeine-ng
 # Setup audio
 packer -S pulseaudio pavucontrol pulseaudio-ctl playerctl
 
+# Setup extract utils
+packer -S atool unzip p7zip zip unrar
+
 # Setup network
 packer -S networkmanager network-manager-applet networkmanager-openvpn private-internet-access-vpn gnome-keyring libsecret
 
