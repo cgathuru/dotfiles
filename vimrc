@@ -59,11 +59,11 @@ nnoremap <leader>n :bnext<CR>
 nnoremap <leader>b :bprevious<CR>
 
 " Firefox-like tab navigation
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab> :tabnext<CR>
+nnoremap <C-PageUp> :tabprevious<CR>
+nnoremap <C-PageDown> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab> <Esc>:tabnext<CR>i
+inoremap <C-PageUp> <Esc>:tabprevious<CR>i
+inoremap <C-PageDown> <Esc>:tabnext<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
 
 "-------- Plugins -------------"
