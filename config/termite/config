@@ -6,11 +6,11 @@ audible_bell = false
 visible_bell = false
 mouse_autohide = true
 allow_bold = true
-dynamic_title = false
+dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 # font = Inconsolata 14
-font = SourceCodePro 12
+font = SourceCodePro 10
 scrollback_lines = 1000
 search_wrap = true
 
