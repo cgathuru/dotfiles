@@ -228,6 +228,8 @@ exec --no-startup-id xinput set-prop "DLL0665:01 06CB:76AD Touchpad" "libinput T
 # Start Virtualbox
 #exec --no-startup-id VBoxClient-all
 
+# Disable c-s freeze on terminals
+exec --no-startup-id stty -ixon
 # Enable numlock on boot
 exec --no-startup-id numlockx
 
