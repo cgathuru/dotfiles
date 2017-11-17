@@ -68,6 +68,9 @@ inoremap <C-t> <Esc>:tabnew<CR>
 
 "-------- Plugins -------------"
 call plug#begin('~/.vim/plugged')
+" Filetype and syntax
+Plug 'sheerun/vim-polyglot'
+
 " File Management
 Plug 'ctrlpvim/ctrlp.vim' "Fuzzy find serarching
 
@@ -100,6 +103,9 @@ else
 	Plug 'scrooloose/syntastic'
 endif
 
+" Automatic brackes
+Plug 'Raimondi/delimitMate'
+
 " Color Scheme
 Plug 'altercation/vim-colors-solarized'
 
@@ -110,6 +116,9 @@ Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 " Jsx
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript.jsx'}
+
+" Go
+Plug 'fatih/vim-go', { 'for': 'go'}
 
 " Colorscheme
 Plug 'altercation/vim-colors-solarized'
