@@ -284,8 +284,8 @@ for_window [class="Spotify"] move to workspace $workspace10
 # Program shourcuts
 bindsym $mod2+z exec zathura
 #bindsym $mod2+g exec gimp
-bindsym $mod2+f exec --no-startup-id firefox
-bindsym $mod2+Shift+f exec --no-startup-id firefox -private-window
+bindsym $mod2+f exec --no-startup-id firefox-developer
+bindsym $mod2+Shift+f exec --no-startup-id firefox-developer -private-window
 bindsym $mod2+c exec --no-startup-id google-chrome-beta
 bindsym $mod2+Shift+c exec --no-startup-id google-chrome-beta --incognito
 #bindsym $mod2+a exec android-studio

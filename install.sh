@@ -5,7 +5,7 @@
 sudo pacman -S vim cmake wget zsh tmux i3 termite redshift xorg-server \
 xorg-xinit openssh adobe-source-code-pro-fonts ttf-symbola ttf-dejavu \
 adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts python2 \
-xorg-xrandr numlockx xorg-xset polkit bc
+xorg-xrandr numlockx xorg-xset polkit bc xf86-video-intel
 
 # Set up vim
 mkdir -p $HOME/.vim/after $HOME/.VIM_UNDO_FILES
@@ -58,6 +58,7 @@ packer -S networkmanager network-manager-applet networkmanager-openvpn private-i
 # Set up zsh
 ln -s $PWD/zprofile $HOME/.zprofile
 ln -s $PWD/zshrc $HOME/.zshrc
+ln -s $PWD/zshenv $HOME/.zshenv
 ln -s $PWD/xinitrc $HOME/.xinitrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
