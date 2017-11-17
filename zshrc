@@ -90,4 +90,5 @@ alias dp='docker ps'
 alias di='docker images'
 alias dv='docker volume ls'
 alias dvp='docker volume prune'
+alias vimrc='vim ~/.vimrc'
 

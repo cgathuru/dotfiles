@@ -71,6 +71,8 @@ call plug#begin('~/.vim/plugged')
 " Filetype and syntax
 Plug 'sheerun/vim-polyglot'
 
+Plug 'tpope/vim-unimpaired'
+
 " File Management
 Plug 'ctrlpvim/ctrlp.vim' "Fuzzy find serarching
 
