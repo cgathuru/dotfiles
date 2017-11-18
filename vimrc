@@ -168,6 +168,7 @@ let g:ycm_complete_in_strings = 1 " Completion in strings
 
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+" Ultisnips settings
 if v:version > 703
 	" Ultisnips Settings
 	"let g:UltiSnipsExpandTrigger="<tab>"
@@ -176,6 +177,9 @@ if v:version > 703
 	let g:UltiSnipsSnippetsDir="~/projects/snips/UltiSnips"
 	nnoremap <leader>ue :UltiSnipsEdit<CR>
 endif
+
+" format with goimports instead of gofmt
+let g:go_fmt_command = "goimports"
 
 " ----- Filetype Settings --------
 set wildignore+=*.pyc " Ignore python compiled files
